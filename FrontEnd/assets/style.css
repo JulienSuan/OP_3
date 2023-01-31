@@ -1,0 +1,556 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+a:visited {
+	text-decoration: none;
+	border-bottom: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+html {
+	scroll-behavior: smooth;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/** end reset css**/
+.contbody {
+	max-width: 1140px;
+	margin:auto;
+	font-family: 'Work Sans' ;
+	font-size: 14px;
+}
+header {
+	display: flex;
+	justify-content: space-between;
+	margin: 6rem 0
+}
+section {
+	margin: 50px 0
+}
+
+h1{
+	display: flex;
+	flex-direction: column;
+	font-family: 'Syne';
+	font-size: 22px;
+	font-weight: 800;
+	color: #B1663C
+}
+
+h1 > span {
+	font-family: 'Work Sans';
+	font-size:10px;
+	letter-spacing: 0.1em;
+;
+}
+
+h2{
+	font-family: 'Syne';
+	font-weight: 700;
+	font-size: 30px;
+	color: #1D6154
+}
+nav ul {
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+
+}
+nav li {
+	padding: 0 10px;
+	font-size: 1.2em;
+}
+
+li:hover {
+	color: #B1663C;
+}
+#introduction {
+	display: flex;
+	align-items: center;
+}
+#introduction figure {
+	flex: 1
+}
+#introduction img {
+	display: block;
+	margin: auto;
+	width: 80%;
+}
+
+#introduction article {
+	flex: 1
+}
+#introduction h2 {
+	margin-bottom: 1em;
+}
+
+#introduction p {
+	margin-bottom: 0.5em;
+}
+#portfolio h2 {
+	text-align: center;
+	margin-bottom: 1em;
+}
+.gallery {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 20px;
+	grid-row-gap: 20px;
+}
+
+.gallery img {
+	width: 100%;
+
+}
+#contact {
+	width: 50%;
+margin: auto;
+}
+#contact > * {
+	text-align: center;
+
+}
+#contact h2{
+	margin-bottom: 20px;
+}
+#contact form {
+	text-align: left;
+	margin-top:30px;
+	display: flex;
+	flex-direction: column;
+}
+
+#contact input {
+	height: 50px;
+	font-size: 1.2em;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+#contact label {
+	margin: 2em 0 1em 0;
+}
+#contact textarea {
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+input[type="submit"]{
+	font-family: 'Syne';
+	font-weight: 700;
+	color: white;
+	background-color: #1D6154;
+	margin : 2em auto ;
+	width: 180px;
+	text-align: center;
+	border-radius: 60px ;
+}
+#tag1, #tag2, #tag3, #tag4 {
+	display: none;
+}
+.labeltag {
+	font-family: 'Syne';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 19px;
+	text-align: center;
+	padding: .5rem 2rem;
+	color: white;
+	border-radius: 50px;
+	box-shadow: inset 0 0 0 2px #1D6154;
+	color: #1D6154;
+	cursor: pointer;
+	user-select: none;
+}
+.labeltag:hover {
+	background-color:#1d61541a;
+}
+.filters {
+	margin-bottom: 4rem;
+	margin-top: 4rem;
+	display: flex;
+	justify-content: center;
+}
+input:checked + .labeltag {
+	background-color: #1D6154;
+	color: white;
+}
+
+footer nav ul {
+	display: flex;
+	justify-content: flex-end;
+	margin: 2em
+}
+
+
+/* EDITION CSS ✨✨✨✨ */
+
+.edition {
+	display: none;
+	background-color: black;
+	padding: .5rem 0;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	justify-content: center;
+	align-items: center;
+	left: 0;
+	column-gap: 2rem;
+	transition: .45s;
+	z-index: 11;
+}
+.btnPublier {
+	padding: 1rem 2rem;
+	background-color: white;
+	font-family: 'Work Sans';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 16px;
+	text-align: center;
+	border-radius: 99px;
+
+}
+.proj {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	column-gap: 2rem;
+}
+.modifGal {
+	display: none;
+	column-gap: .5rem;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Work Sans';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	text-align: center;
+	padding: .5rem 1rem;
+	border: black 2px solid;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: .15s;
+}
+.modifGal:hover {
+	background-color: black;
+	color: white;
+	transform: scale(.95);
+	will-change: transform; 
+}
+.modifGal:hover > .svgg path {
+	fill: white;
+}
+.editmod {
+	color: white;
+	font-family: 'Work Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 19px;
+}
+.edit {
+	display: flex;
+	column-gap: 1rem;
+	align-items: center;
+	
+}
+
+.mesProjets {
+	margin-bottom: 0px!important;
+}
+
+
+
+/* EDITION MODAL 🎈🎈🎈🎄🎄🎄 */
+
+.modal {
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	width: 100%;
+	top: 0;
+	height: 100vh;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	z-index: 10;
+}
+
+.modalcard {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	row-gap: 1.8rem;
+	background-color: white;
+	width: max-content;
+	padding: 3rem 6rem;
+	border-radius: 10px;
+	position: relative;
+	z-index: 15;
+	width: 630px;
+	height: 670px;
+}
+.modalcard2 {
+	position: relative;
+	align-items: flex-start;
+	display: none;
+}
+.formmodal2 {
+	position: absolute;
+}
+.contfile {
+	width: 100%;
+	padding: 2rem 0;
+	background-color: #E8F1F6;
+	border-radius: 3px;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+	align-items: center;
+	row-gap: .5rem;
+	cursor: pointer;
+	border: 2px #8ea7b41e solid;
+	transition: .15s;
+	flex-direction: column;
+}
+.btnvalid {
+	padding: .5rem 4rem;
+	border: none;
+	color: white;
+	border-radius: 99px;
+	background: #A7A7A7;
+	font-family: 'Syne';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 17px;
+	align-self: center;
+}
+.fileinp {
+	width: 100%;
+}
+.chooseImage {
+	cursor: pointer;
+	margin-bottom: .5rem;
+}
+.contfile:hover {
+	border: 2px #8ea7b49d solid;
+}
+.ajouterPhoto {
+	padding: .5rem 2rem;
+	color: #306685;
+	font-family: 'Work Sans';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	border-radius: 99px;
+	background-color: #CBD6DC;
+}
+.size {
+	font-family: 'Work Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 10px;
+	line-height: 12px;
+	text-align: center;
+	color: #444444;
+}
+.preview {
+	width: 100%;
+	height: 200px;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	display: none;
+	border-top-right-radius: 3px;
+	border-top-left-radius: 3px;
+	transition: .15s;
+	overflow: hidden;
+}
+.preview:hover {
+	background-size: 100%;
+}
+#inpfile {
+	position: relative;
+	width: 100%;
+	display: none;
+}
+.close {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 2rem;
+	border-top-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border: rgba(0, 0, 0, 0.068) 2px solid;
+	cursor: pointer;
+}
+.close:hover {
+	border: rgba(0, 0, 0, 0.247) 2px solid;
+} 
+
+.sepa {
+	width: 100%;
+	background-color: #B3B3B3;
+	height: 1px;
+}
+.galphoto {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: .5rem;
+	position: relative;
+	width: 400px;
+	flex-wrap: wrap;
+}
+.imageedit {
+	width: 100%;
+	user-select: none;
+	height: 100%;
+    object-fit: cover;
+	pointer-events: none;
+}
+.modalBtn {
+	background-color: #1D6154;
+	color: white;
+	border-radius: 99px;
+	font-family: 'Syne';
+	font-style: normal;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 17px;
+	padding: .5rem 3rem;
+	border: none;
+	cursor: pointer;
+	transition: .15s;
+}
+.modalBtn:hover {
+	will-change: auto;
+	transform: scale(.95);
+}
+.modalTitle {
+	font-family: 'Work Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 26px;
+	line-height: 30px;
+	text-align: center;
+	width: 100%;
+}
+.modalSupp {
+	font-family: 'Syne';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 17px;
+	color: #D65353;
+	cursor: pointer;
+}
+.galphoto .imagegall > figcaption {
+	font-family: 'Work Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 14px;	
+}
+.imagegall {
+	position: relative;
+	cursor: pointer;
+}
+.input {
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+	padding: .5rem 2rem;
+	width: 379px;
+	height: 51px;
+	margin-bottom: 2rem;
+}
+.modalsub {
+	font-family: 'Work Sans';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	margin: .5rem 0;
+
+	color: #3D3D3D;
+}
+.input2 {
+	margin-bottom: 1rem;
+	width: 100%;
+	box-sizing: border-box;
+}
+.modalinputcont {
+	display: flex;
+	justify-content: flex-start;
+	width: 100%;
+	flex-direction: column;
+}
+.input > option {
+	height: 50px;
+}
+
+.corbenDalas {
+	position: absolute;
+	background-color: black;
+	padding: .5rem;
+	right: 0;
+	margin: .25rem;
+	border-radius: 2px;
+}
+.gallery > .imggalll img{
+	height: 100%;
+	object-fit: cover;
+}
+.gallery > .imggalll {
+	height: 418px;
+}
