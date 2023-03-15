@@ -8,10 +8,6 @@ const tag3 = document.querySelector("#tag3")
 const tag4 = document.querySelector("#tag4")
 
 
-console.log(tag1.checked)
-console.log(tag2.checked)
-console.log(tag3.checked)
-console.log(tag4.checked)
 
 document.querySelector(".form22").addEventListener("change", () => {
     if (tag1.checked) {
@@ -75,6 +71,18 @@ document.addEventListener("scroll", (e) => {
     old = scrollY
 })
 
+
+
+
+
+
+
+
+// GALERIES PHOTOS ✨🌝🌝
+
+
+
+
 const galphoto = document.querySelector(".galphoto")
 const modal = document.querySelector(".modal")
 modifGal.addEventListener("click", () => {
@@ -92,6 +100,10 @@ modifGal.addEventListener("click", () => {
                     </div>
         `
     })
+
+
+
+    // SUPRESSION PHOTOS ✨🌝🍄
     
     const corbenDalas = document.querySelectorAll(".corbenDalas")
     console.log(user.token)
@@ -116,6 +128,11 @@ modifGal.addEventListener("click", () => {
         console.dir(imagegall);
 });
 })
+
+
+// FIN DE SUPRESSION PHOTOS ✨✨🌈
+
+
 
 
 const close = document.querySelectorAll(".close")
@@ -173,6 +190,11 @@ const cateinp = document.querySelector(".cateinp")
 const formmodal2 = document.querySelector(".formmodal2")
 const btnvalid = document.querySelector(".btnvalid")
 
+
+
+
+
+// ADD POST ✨✨🌈🌈🌈✨✨
 
 async function AddPost(titre, cate) {
     await postWork(inpfile.files[0], titre, cate);

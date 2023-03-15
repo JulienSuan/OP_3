@@ -17,19 +17,17 @@ export async function logIn(email, mdp) {
     })
    const res = await log.json()
    console.log(res);
-   if (res) {
-      document.location.href = "/FrontEnd/index.html"
+   if (res.message !== "user not found") {
+      localStorage.setItem("user", JSON.stringify(res))
+      document.location.href = "/Portfolio-architecte-sophie-bluel/FrontEnd/index.html"; 
+   } else {
+      return "Erreur dans l’identifiant ou le mot de passe"
    }
-   localStorage.setItem("user", JSON.stringify(res))
-   return res
 }
 
 
 export async function postWork(file, title, catego) {  
-  // const works =  await fetch("http://localhost:5678/api/works")
-  // const user = JSON.parse(localStorage.getItem("user"))
    const fd = new FormData();
-  //  fd.append('id', parseInt(works.length + 1));
    fd.append('image', file);
    fd.append('title', title);
    fd.append('category', catego);
